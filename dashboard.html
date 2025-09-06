@@ -3,70 +3,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zwigato</title>
+  <title>Zwigato - Food Delivery</title>
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="dashboard.css" />
 </head>
 <body>
-  
-  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Zwigato</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+  <!-- Decorative Bubbles -->
+  <div class="background-decor">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Zwigato</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
           <li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
         </ul>
+        <form class="d-flex" role="search" onsubmit="event.preventDefault(); alert('Search coming soon!');">
+          <input class="form-control me-2 rounded-pill" type="search" placeholder="Search dishes..." aria-label="Search" />
+          <button class="btn btn-light rounded-pill" type="submit">Search</button>
+        </form>
       </div>
     </div>
   </nav>
 
+  <!-- Hero Section -->
+  <section class="hero text-center">
+    <div class="container">
+      <h1>Delicious Food Delivered Fast 🚀</h1>
+      <p class="lead mt-3">Order your favorite meals from the comfort of your home.</p>
+      <a href="#menu" class="btn btn-light btn-lg mt-4 px-4">Browse Menu</a>
+    </div>
+  </section>
 
-  <div class="container my-5">
-    <h2 class="mb-4">Welcome back, Foodie! 🍽️</h2>
-    <div class="row">
-      
+  <!-- Menu Section -->
+  <section id="menu" class="container py-5">
+    <h2 class="section-title">Our Popular Dishes</h2>
+    <div class="row g-4">
+
+      <!-- Dish Cards -->
       <div class="col-md-4">
-        <div class="card">
-          <img src="https://source.unsplash.com/400x300/?burger" class="card-img-top" alt="Burger">
+        <div class="card position-relative">
+          <span class="badge">Non-Veg</span>
+          <img src="https://images.unsplash.com/photo-1613145996363-faae62c7a6d" class="card-img-top" alt="Cheesy Burger" />
           <div class="card-body">
             <h5 class="card-title">Cheesy Burger</h5>
-            <p class="card-text">Delicious beef burger with extra cheese.</p>
-            <a href="#" class="btn btn-danger">Order Now</a>
+            <p class="card-text">Juicy beef patty layered with melting cheese & fresh veggies.</p>
+            <a href="#" class="btn btn-danger w-100">Order Now</a>
           </div>
         </div>
       </div>
 
-      
       <div class="col-md-4">
-        <div class="card">
-          <img src="https://source.unsplash.com/400x300/?pizza" class="card-img-top" alt="Pizza">
+        <div class="card position-relative">
+          <span class="badge">Non-Veg</span>
+          <img src="https://images.unsplash.com/photo-1601924582975-4cc9d8b2a1ab" class="card-img-top" alt="Pepperoni Pizza" />
           <div class="card-body">
             <h5 class="card-title">Pepperoni Pizza</h5>
-            <p class="card-text">Classic pizza topped with pepperoni & cheese.</p>
-            <a href="#" class="btn btn-danger">Order Now</a>
+            <p class="card-text">Classic Italian pizza topped with crispy pepperoni & cheese.</p>
+            <a href="#" class="btn btn-danger w-100">Order Now</a>
           </div>
         </div>
       </div>
 
-     
       <div class="col-md-4">
-        <div class="card">
-          <img src="https://source.unsplash.com/400x300/?sushi" class="card-img-top" alt="Sushi">
+        <div class="card position-relative">
+          <span class="badge">Non-Veg</span>
+          <img src="https://images.unsplash.com/photo-1553621042-f6e147245754" class="card-img-top" alt="Sushi" />
           <div class="card-body">
             <h5 class="card-title">Fresh Sushi</h5>
-            <p class="card-text">Assorted sushi platter with wasabi & soy sauce.</p>
-            <a href="#" class="btn btn-danger">Order Now</a>
+            <p class="card-text">Premium sushi rolls served with soy sauce, wasabi, and love.</p>
+            <a href="#" class="btn btn-danger w-100">Order Now</a>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
+      <div class="col-md-4">
+        <div class="card position-relative">
+          <span class="badge">Veg</span>
+          <img src="https://images.unsplash.com/photo-1528736235302-52922df5b6d1" class="card-img-top" alt="Creamy Pasta" />
+          <div class="card-body">
+            <h5 class="card-title">Creamy Pasta</h5>
+            <p class="card-text">Pasta tossed in white garlic cream sauce & parmesan.</p>
+            <a href="#" class="btn btn-danger w-100">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card position-relative">
+          <span class="badge">Non-Veg</span>
+          <img src="https://images.unsplash.com/photo-1604908177522-4025f4d7b479" class="card-img-top" alt="Fried Chicken" />
+          <div class="card-body">
+            <h5 class="card-title">Fried Chicken</h5>
+            <p class="card-text">Crispy fried chicken pieces with flavorful spices & crunch.</p>
+            <a href="#" class="btn btn-danger w-100">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card position-relative">
+          <span class="badge dessert-badge">Dessert</span>
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" class="card-img-top" alt="Vanilla Ice Cream" />
+          <div class="card-body">
+            <h5 class="card-title">Vanilla Ice Cream</h5>
+            <p class="card-text">Creamy vanilla scoop served cold and sweet.</p>
+            <a href="#" class="btn btn-danger w-100">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="mb-0">Zwigato &copy; 2025. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
