@@ -34,5 +34,5 @@ Nitish Kumar
 GitHub: [@kumarnitish02](https://github.com/kumarnitish02)
 
 # Additional Details
-Acaedamic Assignment using html and bootstrap.
+Academic Assignment using html and bootstrap.
 
